@@ -8,15 +8,17 @@ public class App {
         Worker worker = new Worker();
         Drone drone = new Drone();
 
-        output(queen.doYourJob());
-        output(queen.fly());
+        pollObj(queen);
+        pollObj(worker);
+        pollObj(drone);
+   
+    }   
 
-        output(worker.doYourJob());
-        output(worker.fly());
 
-        output(drone.doYourJob());
-        output(drone.fly());
-        
+        // 2. Variante: Polymorphie
+    private static void pollObj(HoneyBee obj) {
+        output(obj.doYourJob());
+        output(obj.fly());
     }
 
    
